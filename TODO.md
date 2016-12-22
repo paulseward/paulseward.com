@@ -1,3 +1,7 @@
+Layout:
+* Change background
+* Add teacup image
+
 Link to:
 * tumblr (general blogging)
 * youtube (lpbkdotnet)
