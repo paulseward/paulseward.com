@@ -1,5 +1,12 @@
 RewriteEngine On
 
+# Skip rewriting if we're in the downloads folder:
+RewriteCond %{REQUEST_URI} ^/downloads [NC]
+RewriteRule .* - [L]
+# Skip rewriting if we're in the ddmon (and related) folders
+RewriteCond %{REQUEST_URI} ^/ddmon [NC]
+RewriteRule .* - [L]
+
 # If the requested resource doesn't exist, rewrite it to index.html
 RewriteCond	%{DOCUMENT_ROOT}/$1  !-f
 # RewriteCond	%{DOCUMENT_ROOT}/$1  !-d
