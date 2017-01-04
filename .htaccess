@@ -1,6 +1,6 @@
 RewriteEngine On
 
 # If the requested resource doesn't exist, rewrite it to index.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [L]
+RewriteCond	%{DOCUMENT_ROOT}/$1  !-f
+# RewriteCond	%{DOCUMENT_ROOT}/$1  !-d
+RewriteRule	^\.?(.*)$ /index.html [L]
