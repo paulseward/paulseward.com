@@ -12,4 +12,4 @@ RewriteCond	%{DOCUMENT_ROOT}/$1  !-f
 # RewriteCond	%{DOCUMENT_ROOT}/$1  !-d
 RewriteRule	^\.?(.*)$ /index.html [L]
 
-RedirectMatch 403 ^/.git/?(.*)?$
+RedirectMatch 403 \.git/?(.*)?$
